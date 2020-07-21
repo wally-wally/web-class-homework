@@ -1,0 +1,34 @@
+@import '../../styles/utils.scss';
+
+.card-wrapper {
+  position: relative;
+  text-align: center;
+
+  .class-card {
+    @include alignCenter;
+    @include alignFlexCenter(column);
+    width: 340px;
+    height: 170px;
+    background: #efefef;
+    border-radius: 20px;
+    opacity: 0.8;
+    transition: all .2s;
+  
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      font-size: 1.4rem;
+    }
+  
+    &:hover {
+      cursor: pointer;
+      background: #fff;
+      box-shadow: 3px 5px 5px rgba(0, 0, 0, .1);
+      width: 360px;
+      height: 180px;
+      opacity: 1;
+    }
+  }
+}

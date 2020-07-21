@@ -1,0 +1,23 @@
+@import '../../styles/utils.scss';
+
+.not-found {
+  @include alignFlexCenter(column);
+
+  svg {
+    font-size: 100px;
+    color: crimson;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.4rem;
+    border-radius: 10px;
+    background: #84b0da;
+  }
+}
