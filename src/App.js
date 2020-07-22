@@ -15,7 +15,7 @@ const App = ({ location }) => {
         <Switch>
           <Route path="/" component={Main} exact />
           <Route path="/:classTitle" component={HomeworkList} exact />
-          <Route path="/:classTitle/quiz/:quizId" component={HomeworkQuiz} exact />
+          <Route path="/:classTitle/quiz/:homeworkId" component={HomeworkQuiz} exact />
           <Route component={NotFound} />
         </Switch>
       </section>

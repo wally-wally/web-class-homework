@@ -27,7 +27,7 @@ const HomeworkList = ({ match }) => {
             {homework.quiz.length
               ? (<Link
                   className="homework-item-button"
-                  to={`/${classTitle}/quiz/${homework.id}`}
+                  to={`/${classTitle}/quiz/${homework.id}?quizcount=${homework.quiz.length}`}
                 >Quiz</Link>)
               : (<span
                   className="homework-item-button disabled-button"

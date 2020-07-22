@@ -12,8 +12,12 @@
 
   .homework-item-button {
     font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.5px;
     padding: 5px;
     margin-left: 10px;
+    transition: all .2s;
 
     &:first-child {
       background: #28a745;
@@ -25,6 +29,10 @@
 
     &:focus {
       outline: none;
+    }
+
+    &:not(.disabled-button):hover {
+      box-shadow: $shadow;
     }
 
     &.disabled-button {
