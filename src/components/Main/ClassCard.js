@@ -1,20 +1,25 @@
 import React from 'react';
 import './ClassCard.scss';
 import { Link } from 'react-router-dom';
+import { adjustTwoDigit } from '../../utils/adjustTwoDigit';
 
-function adjustTwoDigit(id) {
-  return (id <= 9 ? '0' : '') + id
-}
+const ClassCard = ({ classId, classTitle, openClass }) => {
+  const showAlert = () => alert('준비 중인 강의입니다.');
 
-const ClassCard = ({ classId, classTitle }) => {
   return (
     <div className="card-wrapper">
-      <div className="class-card">
-        <Link to={`/${classTitle.toLowerCase()}`}>
-          <h2>Phase {adjustTwoDigit(classId)}</h2>
-          <p>{classTitle}</p>
-        </Link>
-      </div>
+      {openClass
+        ? <Link to={`/${classTitle.toLowerCase()}`}>
+            <div className="class-card">
+              <h2>Phase {adjustTwoDigit(classId)}</h2>
+              <p>{classTitle}</p>
+            </div>
+          </Link>
+        : <div className="class-card" onClick={showAlert}>
+            <h2>Phase {adjustTwoDigit(classId)}</h2>
+            <p>{classTitle}</p>
+          </div>
+      }
     </div>
   );
 };

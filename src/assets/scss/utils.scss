@@ -5,7 +5,7 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin alignFlexCenter($direction) {
+@mixin alignFlexCenter($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: center;

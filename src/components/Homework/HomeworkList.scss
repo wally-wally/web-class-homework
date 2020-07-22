@@ -1,0 +1,55 @@
+@import '../../assets/scss/variables.scss';
+
+.homework-item {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: $shadow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  .homework-item-button {
+    font-size: 14px;
+    padding: 5px;
+    margin-left: 10px;
+
+    &:first-child {
+      background: #28a745;
+    }
+    
+    &:last-child {
+      background: #03a9f4;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.disabled-button {
+      background: #ccc;
+      color: #666;
+      opacity: 0.8;
+    }
+  }
+}
+
+.homework-item-info {
+  display: flex;
+  align-items: center;
+
+  .homework-item-date {
+    text-align: center;
+    margin-right: 15px;
+    line-height: 1.35;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .homework-item-title {
+    font-size: 1.15em;
+    font-weight: 600;
+  }
+}

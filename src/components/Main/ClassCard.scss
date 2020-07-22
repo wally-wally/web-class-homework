@@ -1,4 +1,5 @@
-@import '../../styles/utils.scss';
+@import '../../assets/scss/utils.scss';
+@import '../../assets/scss/variables.scss';
 
 .card-wrapper {
   position: relative;
@@ -9,26 +10,39 @@
     @include alignFlexCenter(column);
     width: 340px;
     height: 170px;
-    background: #efefef;
+    background: #22b8cf;
     border-radius: 20px;
     opacity: 0.8;
     transition: all .2s;
   
     h2 {
       margin-bottom: 0.5rem;
+      transition: all .2s;
     }
   
     p {
       font-size: 1.4rem;
+      font-weight: 600;
+      transition: all .2s;
     }
   
     &:hover {
       cursor: pointer;
-      background: #fff;
-      box-shadow: 3px 5px 5px rgba(0, 0, 0, .1);
+      background: #efefef;
+      box-shadow: $shadow;
       width: 360px;
       height: 180px;
       opacity: 1;
+      
+      h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+        color: #666;
+      }
+
+      p {
+        font-size: 1.75rem;
+      }
     }
   }
 }

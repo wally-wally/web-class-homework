@@ -1,7 +1,16 @@
-@import './styles/default.scss';
+@import './assets/scss/default.scss';
+@import './assets/scss/utils.scss';
 
 body {
-  background: #FBE182;
+  background: #e9ecef;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  @include alignFlexCenter(column);
+  width: 75%;
+  min-width: 1440px;
+  margin: 2rem auto;
+  padding: 0 2rem;
 }
